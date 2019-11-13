@@ -1,0 +1,21 @@
+{
+  "name": "swapp",
+  "version": "1.0.0",
+  "description": "swapp website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass --watch css -o css"
+  },
+  "author": "Netanella",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "lite-server": "^2.5.4",
+    "popper.js": "^1.16.0"
+  }
+}
