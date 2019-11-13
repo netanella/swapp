@@ -1,8 +1,62 @@
-$background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
+$text-gray: #9fabb0;
 
 body {
-  color: black;
-  background: blue;
+  background: floralwhite;
+}
+
+.navbar-nav>li>a {
+    padding: 0;
+}
+
+.nav-link {
+  padding-right: 10rem;
+  padding-left: 20px;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 20%;
+  background-color: $text-gray;
+  height: 1px;
+}
+
+header {
+  color: floralwhite;
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .container-fluid {
+    position: relative;
+    z-index: 3;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
 }
