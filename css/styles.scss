@@ -1,17 +1,11 @@
 $text-gray: #9fabb0;
+$theme-dark-green: #0d1a11;
 
 body {
   background: floralwhite;
 }
 
-.navbar-nav>li>a {
-    padding: 0;
-}
 
-.nav-link {
-  padding-right: 10rem;
-  padding-left: 20px;
-}
 
 hr {
   border: 0;
@@ -58,4 +52,30 @@ header {
     z-index: 1;
   }
 
+  @media(max-width:767px) {
+    .nav-item {
+      border: 0 !important;
+    }
+
+    .navbar-toggler {
+      z-index: 10;
+    }
+
+    #navbar {
+      background: $theme-dark-green;
+       ul > li > a {
+        color:floralwhite;
+      }
+      position: absolute;
+      top:0;
+      z-index: 1;
+
+      li {
+        padding: 1.5em;
+      }
+    }
+  }
+
 }
+
+
