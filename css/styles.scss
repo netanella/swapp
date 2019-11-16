@@ -1,10 +1,19 @@
-$text-gray: #9fabb0;
+$text-gray: #c5d1d6;
 $theme-dark-green: #14291b;
 
 
 
 body {
-  background: floralwhite;
+  background: whitesmoke;
+}
+
+a {
+  color: black;
+  font-size: 0.85rem;
+}
+
+p {
+  font-size: 0.85rem;
 }
 
 hr {
@@ -13,6 +22,8 @@ hr {
   display:block;
   background-color: $text-gray;
   height: 1px;
+  padding: 0;
+  margin:0;
 }
 
 header {
@@ -113,8 +124,16 @@ header {
 }
 
 #contact {
+
   button[type="submit"] {
     border-radius: 0;
+  }
+}
+
+#signupnow {
+  background: $theme-dark-green;
+  h2,p,a {
+    color: floralwhite;
   }
 }
 

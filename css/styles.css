@@ -1,12 +1,21 @@
 body {
-  background: floralwhite; }
+  background: whitesmoke; }
+
+a {
+  color: black;
+  font-size: 0.85rem; }
+
+p {
+  font-size: 0.85rem; }
 
 hr {
   border: 0;
   clear: both;
   display: block;
-  background-color: #9fabb0;
-  height: 1px; }
+  background-color: #c5d1d6;
+  height: 1px;
+  padding: 0;
+  margin: 0; }
 
 header {
   color: floralwhite;
@@ -86,3 +95,9 @@ header .overlay {
 
 #contact button[type="submit"] {
   border-radius: 0; }
+
+#signupnow {
+  background: #14291b; }
+
+#signupnow h2, #signupnow p, #signupnow a {
+  color: floralwhite; }

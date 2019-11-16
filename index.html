@@ -31,10 +31,10 @@
                             <a class="nav-link text-center py-0" href="#features">Features</a>
                         </li>
                         <li class="nav-item border-right border-secondary flex-fill justify-content-center">
-                            <a class="nav-link text-center py-0" href="#">About</a>
+                            <a class="nav-link text-center py-0" href="#available">Our Items</a>
                         </li>
                         <li class="nav-item border-right border-secondary flex-fill justify-content-center">
-                            <a class="nav-link text-center py-0" href="#">Contact</a>
+                            <a class="nav-link text-center py-0" href="#contact">Contact</a>
                         </li>
                         <li class="nav-item flex-fill">
                             <a class="nav-link text-center py-0" href="#">Help</a>
@@ -50,7 +50,7 @@
                 <p class="col-12 col-sm-6 text-center">With <span class="font-italic">Swapp</span> you can give your
                     beloved items a happy new home, and get other cool items in return -
                     <span class="font-italic">100% FREE!</span> </p>
-                <hr class="w-25 d-none d-sm-block">
+                <hr class="w-25 d-none d-sm-block m-4">
                 <button class="btn btn-warning col-6 col-sm-3 m-2">Sign Up</button>
                 <button class="btn btn-secondary col-6 col-sm-3">Log In</button>
             </div>
@@ -191,32 +191,77 @@
     </div>
 </div>
 <hr>
-<div class="container h-100 my-5" id="contact">
+<div class="container-fluid py-5 bg-white" id="contact">
     <div class="row row-header align-items-center d-flex flex-column my-2">
         <h2 class="font-weight-light">Get In Touch</h2>
         <p class="text-center">We will get back to you as soon as possible</p>
     </div>
     <div class="row row-content">
-        <div class="col-8 m-auto">
+        <div class="col-12 col-sm-8 m-auto">
             <form>
                 <div class="form-row">
                     <div class="col-12 my-1">
                         <textarea class="w-100" type="text" placeholder="Message" rows="5" name="message"></textarea>
                     </div>
-                    <div class="col my-1">
+                    <div class="col-6 col-sm my-1">
                         <input type="text" placeholder="Full Name" name="name"/>
                     </div>
-                    <div class="col my-1">
+                    <div class="col-6 col-sm my-1">
                         <input type="text" placeholder="Email" name="email"/>
                     </div>
-                    <div class="col my-1">
-                        <button class="btn btn-warning p-0 h-100 w-100" type="submit" name="submit">Submit</button>
+                    <div class="col-12 col-sm my-1">
+                        <button class="btn btn-dark p-0 h-100 w-100" type="submit" name="submit">Submit</button>
                     </div>
                 </div>
 
             </form>
         </div>
     </div>
+</div>
+<hr>
+<div class="container-fluid pt-5 pb-2" id="signupnow">
+    <div class="row row-header align-items-center d-flex flex-column my-2">
+        <h2 class="font-weight-light">What are you waiting for?</h2>
+    </div>
+    <div class="row row-content pt-5">
+        <div class="col-12 col-sm-6 m-auto text-center">
+            <button class="btn btn-warning w-50 m-2">Sign Up</button>
+            <p>Already have an account? <a href="#"><strong>Log in</strong></a></p>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="container h-100">
+    <footer>
+        <div class="row row-content m-3">
+            <nav class="navbar navbar-expand col">
+                <ul class="navbar-nav m-auto col-sm-6 d-flex d-block">
+                    <li class="nav-item border-right border-secondary flex-fill">
+                        <a class="nav-link text-center py-0" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item border-right border-secondary flex-fill justify-content-center">
+                        <a class="nav-link text-center py-0" href="#available">Our Items</a>
+                    </li>
+                    <li class="nav-item border-right border-secondary flex-fill justify-content-center">
+                        <a class="nav-link text-center py-0" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link text-center py-0" href="#">Help</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <hr class="w-25 row m-auto">
+
+        <div class="row row-content my-3">
+            <p class="col-12 text-center mb-0">1717 Bluegreen st. New York, NY 10023, USA</p>
+            <p class="col-12 text-center"><span class="fa fa-copyright"></span>Swapp Inc.</p>
+        </div>
+
+    </footer>
 </div>
 
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
