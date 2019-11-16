@@ -1,7 +1,7 @@
 @import "~font-awesome/css/font-awesome.css";
 
 $text-gray: #9fabb0;
-$theme-dark-green: #0d1a11;
+$theme-dark-green: #14291b;
 
 
 
@@ -84,14 +84,26 @@ header {
   background: $theme-dark-green;
 
   .carousel-item {
-    height: 300px;
+    height: 250px;
 
     img {
       position: absolute;
       top: 0;
       left: 0;
-      min-height: 300px;
+      min-height: 250px;
     }
+
+    @media(max-width:767px) {
+      h4 {
+        width: 60%;
+        background: $theme-dark-green;
+        margin: auto;
+        max-height: 100%;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+      }
+    }
+
   }
 
   #carouselButton {

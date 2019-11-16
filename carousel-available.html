@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../../Bootstrap4-starter/Bootstrap4/conFusion/css/styles-old.css">
+</head>
+<body>
+
+<div class="container h-100 my-5" id="available">
+    <div class="row row-header align-items-center d-flex flex-column">
+        <h2 class="font-weight-light">Available On Site</h2>
+        <p class="text-center col-sm-6">Sign up to see what other free stuff you can get</p>
+    </div>
+    <div class="row row-content">
+        <div class="col">
+            <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="container p-0">
+                        <!--Carousel Items-->
+                        <div class="carousel-item active">
+                            <div class="row h-100">
+                                <div class="col-5">
+                                    <img class="d-block img-fluid w-100"
+                                         src="img/harry-potter.jpg" alt="Harry Potter">
+                                </div>
+                                <div class="col-5 text-light m-auto">
+                                    <h4>Harry Potter and the Chamber of Secrets <span class="badge badge-danger">NEW</span></h4>
+                                    <p class="d-none d-sm-block"> A unique combination of Indian Uthappam (pancake) and
+                                        Italian pizza.</p>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="row h-100">
+                                <div class="col-5">
+                                    <img class="d-block img-fluid"
+                                         src="img/lego.jpg" alt="Lego">
+                                </div>
+                                <div class="col-5 text-light m-auto">
+                                    <h4>Lego board game <span class="badge badge-danger">NEW</span> </h4>
+                                    <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads,
+                                        six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks.
+                                        All for just $19.99 per person </p>
+                                </div>
+                                <div class="col"></div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row h-100">
+                                <div class="col-5">
+                                    <img class="d-block img-fluid"
+                                         src="img/stroller.jpg" alt="Stroller">
+                                </div>
+                                <div class="col-5 text-light m-auto">
+                                    <h4>Baby Stroller</h4>
+                                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                        International experience having worked closely with
+                                        whos-who in the culinary world, he specializes in
+                                        creating mouthwatering Indo-Italian fusion experiences.
+                                    </p>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Carousel Controls-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                    <button class="btn btn-warning btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#mycarousel').carousel({interval: 4000});
+        $('#carouselButton').click(function(){
+            if($('#carouselButton').children('span').hasClass('fa-pause')){
+                $('#mycarousel').carousel('pause');
+                $('#carouselButton').children('span').removeClass('fa-pause');
+                $('#carouselButton').children('span').addClass('fa-play');
+            }
+            else if ($('#carouselButton').children('span').hasClass('fa-play')){
+                $('#mycarousel').carousel('cycle');
+                $('#carouselButton').children('span').removeClass('fa-play');
+                $('#carouselButton').children('span').addClass('fa-pause');
+            }
+
+        });
+        $('#carousel-play').click(function(){
+            $('#mycarousel').carousel('cycle');
+        });
+
+        $('#reserveButton').click(function(){
+            $('#reservationModal').modal('show');
+        });
+        $('#loginButton').click(function(){
+            $('#loginModal').modal('show');
+        });
+    });
+
+
+</body>
+</html>
