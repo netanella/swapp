@@ -96,8 +96,17 @@ header .overlay {
 #contact button[type="submit"] {
   border-radius: 0; }
 
-#signupnow {
+footer {
   background: #14291b; }
 
-#signupnow h2, #signupnow p, #signupnow a {
+footer h2, footer p, footer a {
+  color: floralwhite; }
+
+button[type="submit"] {
+  border-radius: 0; }
+
+footer {
+  background: #14291b; }
+
+footer h2, footer p, footer a {
   color: floralwhite; }

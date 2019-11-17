@@ -51,12 +51,57 @@
                     beloved items a happy new home, and get other cool items in return -
                     <span class="font-italic">100% FREE!</span> </p>
                 <hr class="w-25 d-none d-sm-block m-4">
-                <button class="btn btn-warning col-6 col-sm-3 m-2">Sign Up</button>
-                <button class="btn btn-secondary col-6 col-sm-3">Log In</button>
+                <button class="btn btn-warning col-6 col-sm-3 m-2 signupButton">Sign Up</button>
+                <button class="btn btn-secondary col-6 col-sm-3 loginButton">Log In</button>
             </div>
         </div>
     </div>
 </header>
+
+<!--Login Modal-->
+<div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Login </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Email">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 text-center">
+                        <button type="button" class="btn btn-secondary btn-sm rounded-0 px-4" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-1 px-4">Sign in</button>
+                        <p>New here? <a class="signupButton" href="#"><strong> Sign up</strong></a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="signupModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Sign up </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This feature is currently unavailable. Come back later! </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container h-100 my-5" id="features">
     <div class="row row-header align-items-center d-flex flex-column">
@@ -65,7 +110,7 @@
             that produces the generous harvest." - <span class="font-italic">Orison Swett Marden</span></p>
     </div>
     <div class="row row-content my-4">
-        <div class="col-12 col-sm">
+        <div class="col-12 col-sm" id="feature1">
             <div class="row">
                 <div class="col-2 d-inline-block text-secondary align-top">
                     <i class="fa fa-gift fa-3x"></i>
@@ -225,16 +270,15 @@
     </div>
     <div class="row row-content pt-5">
         <div class="col-12 col-sm-6 m-auto text-center">
-            <button class="btn btn-warning w-50 m-2">Sign Up</button>
-            <p>Already have an account? <a href="#"><strong>Log in</strong></a></p>
+            <button class="btn btn-warning w-50 m-2 signupButton">Sign Up</button>
+            <p>Already have an account? <a class="loginButton" href="#"><strong>Log in</strong></a></p>
         </div>
     </div>
 </div>
 <hr>
 
-<div class="container h-100">
-    <footer>
-        <div class="row row-content m-3">
+<footer class="container-fluid h-100">
+        <div class="row row-content p-3">
             <nav class="navbar navbar-expand col">
                 <ul class="navbar-nav m-auto col-sm-6 d-flex d-block">
                     <li class="nav-item border-right border-secondary flex-fill">
@@ -256,44 +300,15 @@
         </div>
         <hr class="w-25 row m-auto">
 
-        <div class="row row-content my-3">
+        <div class="row row-content py-3">
             <p class="col-12 text-center mb-0">1717 Bluegreen st. New York, NY 10023, USA</p>
             <p class="col-12 text-center"><span class="fa fa-copyright"></span>Swapp Inc.</p>
         </div>
-
-    </footer>
-</div>
+</footer>
 
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#mycarousel').carousel({interval: 4000});
-        $('#carouselButton').click(function(){
-            if($('#carouselButton').children('span').hasClass('fa-pause')){
-                $('#mycarousel').carousel('pause');
-                $('#carouselButton').children('span').removeClass('fa-pause');
-                $('#carouselButton').children('span').addClass('fa-play');
-            }
-            else if ($('#carouselButton').children('span').hasClass('fa-play')){
-                $('#mycarousel').carousel('cycle');
-                $('#carouselButton').children('span').removeClass('fa-play');
-                $('#carouselButton').children('span').addClass('fa-pause');
-            }
-
-        });
-        $('#carousel-play').click(function(){
-            $('#mycarousel').carousel('cycle');
-        });
-
-        $('#reserveButton').click(function(){
-            $('#reservationModal').modal('show');
-        });
-        $('#loginButton').click(function(){
-            $('#loginModal').modal('show');
-        });
-    });
-</script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
